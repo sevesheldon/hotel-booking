@@ -1,0 +1,14 @@
+#show-hotel {
+  display: none;
+  min-height: 200px;
+  background-color: pink;
+}
+
+.hotel-to-click {
+  cursor: pointer;
+  color: teal;
+}
+
+.hotel-to-click:hover {
+    text-decoration: underline;
+}
