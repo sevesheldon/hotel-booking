@@ -7,6 +7,10 @@ function Hotel(hotelName, rooms, booked) {
   this.booked = booked;
 }
 
+Hotel.prototype.checkAvailability = function() {
+  return this.rooms - this.booked;
+}
+
 //user interface logic
 $(document).ready(function() {
 
@@ -28,9 +32,15 @@ $(document).ready(function() {
       $("#show-hotel h2").text(newHotel.hotelName);
       $(".rooms-booked").text(newHotel.booked);
       $(".rooms-total").text(newHotel.rooms);
+      $(".availability").text(newHotel.checkAvailability());
+
     });
 
-
+    console.log(newHotel.rooms);
+    console.log(newHotel.booked);
+    console.log(typeof(newHotel.rooms));
+    console.log(typeof(newHotel.booked));
+    console.log(Hotel.prototype.checkAvailability());
 
     $("input").val("");
 
